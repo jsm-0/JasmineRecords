@@ -20,7 +20,7 @@ Permettre à un utilisateur de :
 - Voir les **détails d’un album**
 - Passer une **commande en ligne**
 
-#### 🛠️ Objectifs techniques
+####  Objectifs techniques
 Mettre en pratique les technologies suivantes :
 - **HTML, CSS, JavaScript, PHP, SQL**
 - **Git et GitHub** pour la gestion de versions
