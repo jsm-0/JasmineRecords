@@ -20,11 +20,11 @@ Permettre à un utilisateur de :
 - Voir les **détails d’un album**
 - Passer une **commande en ligne**
 
-#### 🛠️ Objectifs techniques
+####  Objectifs techniques
 Mettre en pratique les technologies suivantes :
 - **HTML, CSS, JavaScript, PHP, SQL**
 - **Git et GitHub** pour la gestion de versions
-
+- **Node.js** pour relier le frontend et le backend??
 ---
 
 ##  Analyse des besoins
@@ -93,4 +93,8 @@ La base de données a été conçue afin de respecter les règles de modélisati
 Cette structure garantit une base de données **cohérente, évolutive et conforme aux besoins du site e-commerce**.
 
 ---
+
+## Programmation du site 
+
+
 
