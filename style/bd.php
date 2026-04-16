@@ -1,6 +1,6 @@
 <?php
 
-$port = 3308; 
+$port = 3306; 
 $host = "localhost";
 $dbname = "jasminerecordsbdd";
 $user = "jsrecords";

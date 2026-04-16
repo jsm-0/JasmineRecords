@@ -161,7 +161,6 @@ footer p {
     font-size: 0.95rem;
 }
 
-/* Content wrapper for pages */
 .content {
     flex: 1;
     min-height: calc(100vh - 300px);
@@ -185,7 +184,7 @@ footer p {
     margin: 12px auto 0;
 }
 
-/* Form Styles */
+
 .form-container {
     max-width: 500px;
     margin: 0 auto;
