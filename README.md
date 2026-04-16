@@ -24,7 +24,6 @@ Permettre à un utilisateur de :
 Mettre en pratique les technologies suivantes :
 - **HTML, CSS, JavaScript, PHP, SQL**
 - **Git et GitHub** pour la gestion de versions
-- **Node.js** pour relier le frontend et le backend??
 ---
 
 ##  Analyse des besoins
@@ -65,7 +64,6 @@ Mettre en pratique les technologies suivantes :
    - Résumé et message de validation
 10. **À propos**
 11. **Contact**
-12. **Favoris** (optionnel)
 
 ---
 
@@ -87,8 +85,6 @@ L’interface est pensée pour être **simple, lisible et responsive**.
 La base de données a été conçue afin de respecter les règles de modélisation (MCD / MLD).
 
 - La **commande** est séparée des **albums** grâce à une table `ligne_commande`, ce qui permet de gérer **plusieurs albums et les quantités** dans une même commande.
-- La fonctionnalité **favori** correspond à une relation **plusieurs-à-plusieurs** entre les clients et les albums.  
-  Elle est modélisée à l’aide d’une **table associative `favori`**.
 
 Cette structure garantit une base de données **cohérente, évolutive et conforme aux besoins du site e-commerce**.
 
