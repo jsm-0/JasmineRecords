@@ -5,6 +5,8 @@
     if (!in_array($page, $pages_valides)) {
         $page = 'acceuil';
     }
+
+    require_once 'style/bd.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,16 +19,15 @@
 </head>
 
 <body>
-    <?php include 'components/header.php'; ?>
-    <nav></nav>
+        <?php include 'pages/header.php'; ?>
+        <nav></nav>
 
-    <main>
-        <?php include 'pages/' . $page . '.php'; ?>
-    </main>
+        <main>
+            <?php include 'pages/' . $page . '.php'; ?>
+        </main>
 
-    <footer>
-        <?php include 'components/footer.php'; ?>
-    </footer>
+        <footer>
+            <?php include 'pages/footer.php'; ?>
 </body>
 
 </html>
