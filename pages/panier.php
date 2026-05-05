@@ -5,9 +5,12 @@
     if (isset($_GET['success']) && $_GET['success'] === 'checkout') {
         echo '<div class="alert alert-success" style="margin-bottom:20px;">Commande validée avec succès ! Merci de votre achat.</div>';
     }
+    if (isset($_GET['error']) && $_GET['error'] === 'db') {
+        echo '<div class="alert alert-error" style="margin-bottom:20px;">Une erreur est survenue lors de l\'enregistrement de votre commande. Veuillez réessayer.</div>';
+    }
 
     if (!isset($_SESSION['client_id'])) {
-        echo '<div class="alert alert-warning cart-empty">Vous devez être connecté pour voir ou modifier votre panier. <br><br><a href="index.php?page=connexion" class="cart-alert-link">Se connecter</a></div>';
+        echo '<div class="alert alert-warning cart-empty">Vous devez être connecté pour voir, modifier ou payer votre panier. <br><br><a href="index.php?page=connexion" class="cart-alert-link">Se connecter</a></div>';
     } else {
         $panier = isset($_SESSION['panier']) ? $_SESSION['panier'] : [];
 
