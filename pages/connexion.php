@@ -2,6 +2,10 @@
 $error = '';
 $success = '';
 
+if (isset($_GET['error']) && $_GET['error'] === 'login_required') {
+    $error = "Vous devez être connecté ou créer un compte pour ajouter des articles au panier.";
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
@@ -14,7 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($user && password_verify($password, $user['mot_de_passe'])) {
                 $success = "Connexion réussie ! Bienvenue " . htmlspecialchars($user['prenom'] ?? '');
-                // session_start(); $_SESSION['client_id'] = $user['id_client'];
+                $_SESSION['client_id'] = $user['id_client'];
+                $_SESSION['client_prenom'] = $user['prenom'];
             } else {
                 $error = "Identifiants incorrects ou base de données non configurée.";
             }

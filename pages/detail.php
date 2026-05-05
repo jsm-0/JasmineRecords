@@ -38,7 +38,14 @@
                             <?php echo $prix; ?>
                         </div>
                         <div class="detail-actions">
-                            <button onclick="alert('Ajouté au panier !')">Ajouter au panier</button>
+                            <?php if (!isset($_SESSION['client_id'])): ?>
+                                <button type="button" onclick="alert('Veuillez vous connecter ou créer un compte pour ajouter au panier.'); window.location.href='index.php?page=connexion';">Ajouter au panier</button>
+                            <?php else: ?>
+                                <form action="pages/add_to_cart_action.php" method="GET" style="display: inline;">
+                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                    <button type="submit">Ajouter au panier</button>
+                                </form>
+                            <?php endif; ?>
                         </div>
                         
                         <div class="tracklist-container">

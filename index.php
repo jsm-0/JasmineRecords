@@ -1,12 +1,13 @@
 <?php
-    $page = isset($_GET['page']) ? $_GET['page'] : 'acceuil';
-    $pages_valides = ['acceuil', 'catalogue', 'connexion', 'inscription', 'apropos', 'detail'];
-    
-    if (!in_array($page, $pages_valides)) {
-        $page = 'acceuil';
-    }
+session_start();
+$page = isset($_GET['page']) ? $_GET['page'] : 'acceuil';
+$pages_valides = ['acceuil', 'catalogue', 'connexion', 'inscription', 'apropos', 'detail', 'panier'];
 
-    require_once 'style/bd.php';
+if (!in_array($page, $pages_valides)) {
+    $page = 'acceuil';
+}
+
+require_once 'style/bd.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,15 +20,16 @@
 </head>
 
 <body>
-        <?php include 'pages/header.php'; ?>
-        <nav></nav>
+    <?php include 'pages/header.php'; ?>
+    <nav></nav>
 
-        <main>
-            <?php include 'pages/' . $page . '.php'; ?>
-        </main>
+    <main>
+        <?php include 'pages/' . $page . '.php'; ?>
+    </main>
 
-        <footer>
-            <?php include 'pages/footer.php'; ?>
+    <footer>
+        <?php include 'pages/footer.php'; ?>
+    </footer>
 </body>
 
 </html>
