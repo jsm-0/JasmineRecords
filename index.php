@@ -1,6 +1,6 @@
 <?php
     $page = isset($_GET['page']) ? $_GET['page'] : 'acceuil';
-    $pages_valides = ['acceuil', 'catalogue', 'connexion', 'inscription', 'apropos'];
+    $pages_valides = ['acceuil', 'catalogue', 'connexion', 'inscription', 'apropos', 'detail'];
     
     if (!in_array($page, $pages_valides)) {
         $page = 'acceuil';
